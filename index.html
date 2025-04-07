@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TriplePixel</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="./src/main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="../index.html">
+                <img src="./assets/Tripe Pixel logo.png" alt="TriplePixel Logo" class="logo">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./vistas/servicios.html">Servicios</a></li>
+                    <li><a href="./vistas/tienda.html">Tienda</a></li>
+                    <li><a href="./vistas/blog.html">Blog</a></li>
+                    <li><a href="./vistas/testimonios.html">Testimonios</a></li>
+                    <li><a href="./vistas/Nosotros.html">Nosotros</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="welcomeMessage"></div>
+        <div class="container-registro">
+            <img class="img-login" src="./assets/logic-tp.png" alt="Usuario" id="userIcon">
+            <div class="dropdown-menu" id="authMenu">
+                <a href="./vistas/is.html">Iniciar sesión</a>
+                <a href="./vistas/registro.html">Registrarse</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="slider">
+        <div class="slides">
+            <img src="./assets/slider1.png" alt="Slider Image 1">
+            <img src="./assets/slider2.png" alt="Slider Image 2">
+            <img src="./assets/slider3.png" alt="Slider Image 3">
+            <img src="./assets/slider4.png" alt="Slider Image 3">
+            <img src="./assets/slider5.png" alt="Slider Image 3">
+            <!-- Añade más imágenes según s -->
+        </div>
+    </div>
+
+    <section class="top-products">
+        <h2><a href="./vistas/tienda.html">Productos Más Vendidos</a></h2>
+        <div class="product-container">
+            <div class="product">
+                <div class="discount">23% OFF</div>
+                <img src="./assets/producto1.png" alt="Portal">
+                <h3>Portal DELL</h3>
+                <p>$1.000.000</p>
+                <p>Dell Latitud 3411 - 16 ram - SSD 512GB - Intel Corei 5</p>
+            </div>
+            <div class="product">
+                <div class="discount">15% OFF</div>
+                <img src="./assets/producto2.png" alt="Monitor">
+                <h3>Monitor LD 27"</h3>
+                <p>$500.000</p>
+                <p>Monitor 27 pulgadas - PSI - REspuesta de 1 mm con soporte</p>
+            </div>
+            <div class="product">
+                <div class="discount">10% OFF</div>
+                <img src="./assets/producto3.png" alt="Cámara Web">
+                <h3>Cámara Web Logictecg</h3>
+                <p>$200.000</p>
+                <p>gran angular con enfoque automatico- alta definicion</p>
+            </div>
+            <div class="product">
+                <div class="discount">20% OFF</div>
+                <img src="./assets/producto4.png" alt="Mouse Gamer">
+                <h3>Mouse Gamer</h3>
+                <p>$150.000</p>
+                <p>Mouse Gamer Maxel 4 Botones Gaming Tron - 1600 A 7200 Dpi Color</p>
+            </div>
+            <div class="product">
+                <div class="discount">18% OFF</div>
+                <img src="./assets/producto5.png" alt="Impresora">
+                <h3>Impresora HP</h3>
+                <p>$300.000</p>
+                <p>Impresora Multifuncional HP 520 Smart Tank Blanca</p>
+            </div>
+            <div class="product">
+                <div class="discount">25% OFF</div>
+                <img src="./assets/producto6.png" alt="Control de Xbox">
+                <h3>Control de Xbox</h3>
+                <p>$250.000</p>
+                <p>Compatible con Xbox 350 y computador.</p>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <div class="manufacturers-section">
+            <h2>Fabricantes de Computadoras Más Vendidos</h2>
+            <ul id="manufacturersList"></ul>
+            <canvas id="manufacturersChart" style="height:400px;"></canvas>
+        </div>
+
+        <section class="servicios-containet">
+
+            <h1><a href="./vistas/servicios.html">Servicios</a></h1>
+
+            <p>En TriplePixel, ofrecemos una amplia gama de servicios tecnológicos para satisfacer todas tus
+                necesidades
+                digitales.
+                Desde el diseño de sitios web personalizados hasta el desarrollo de aplicaciones móviles y soluciones de
+                e-commerce,
+                nuestro equipo de expertos está aquí para ayudarte a transformar tus ideas en realidad.
+            </p>
+            <h2>Nuestros Servicios Incluyen:</h2>
+
+            <ul>
+                <li> Desarrollo Web: Sitios web responsivos y optimizados.</li>
+                <li>Aplicaciones Móviles: Soluciones innovadoras para iOS y Android.</li>
+                <li>Marketing Digital: Estrategias para mejorar tu presencia en línea.</li>
+                <li>Consultoría Tecnológica: Asesoría para optimizar tus procesos digitales.</li>
+                <li>Soporte Técnico: Mantenimiento y soporte para asegurar que todo funcione sin problemas.</li>
+            </ul>
+        </section>
+
+        <div class="form-container">
+            <h2>Contacto</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">ENVIAR</button>
+            </form>
+            <p id="formMessage"></p>
+        </div>
+    </main>
+    <footer>
+        <div class="end">
+            <p>Todos los derechos reservados <strong>Triple Pixel 2024</strong> </p>
+            <p>Calle Falsa 123, Ciudad Imaginaria, País Inventado</p>
+            <p>Teléfono: +123 456 7890</p>
+            <p>Correo electrónico: contacto@triplepixel.com</p>
+        </div>
+        <img src="./assets/Tripe Pixel logo.png" alt="Tripe Pixel logo.png">
+    </footer>
+</body>
+
+</html>
