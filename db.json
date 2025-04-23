@@ -1,14 +1,16 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "Juan",
-      "age": 25
+      "id": "1",
+      "username": "admin",
+      "password": "admin123",
+      "role": "admin"
     },
     {
-      "id": 2,
-      "name": "Laura",
-      "age": 30
+      "id": "5d13",
+      "username": "juan",
+      "password": "juan",
+      "role": "visualizador"
     }
   ]
 }
