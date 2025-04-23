@@ -1,5 +1,5 @@
 async function loadUsers() {
-    let response = await fetch("http://localhost:3000/users");
+    let response = await fetch("https://frontend-triplepixel-1.onrender.com/users");
     let users = await response.json();
 
     let userList = document.getElementById("usersList");
@@ -13,7 +13,8 @@ async function loadUsers() {
             let deleteBtn = document.createElement("button");
             deleteBtn.textContent = "Eliminar";
             deleteBtn.onclick = async () => {
-                await fetch(`http://localhost:3000/users/${user.id}`, { method: "DELETE" });
+                await fetch(`https://frontend-triplepixel-1.onrender.com/users/${user.id}`, { method: "DELETE" });
+
                 loadUsers();
             };
             li.appendChild(deleteBtn);
@@ -25,7 +26,7 @@ async function loadUsers() {
 
 document.getElementById("logout").addEventListener("click", () => {
     localStorage.removeItem("user");
-    window.location.href = "index.html";
+    window.location.href = "../index.html";
 });
 
 loadUsers();
@@ -36,5 +37,5 @@ const user = JSON.parse(localStorage.getItem("user"));
 
 if (!user || user.role !== "admin") {
     alert("Acceso denegado. Debes ser administrador.");
-    window.location.href = "index.html"; // Redirigir si no es admin
+    window.location.href = "../index.html"; // Redirigir si no es admin
 }

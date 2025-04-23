@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const username = document.getElementById("username").value;
             const password = document.getElementById("password").value;
 
-            fetch("http://localhost:3000/users")
+            fetch("https://frontend-triplepixel-1.onrender.com/users")
                 .then(response => response.json())
                 .then(users => {
                     const user = users.find(u => u.username === username && u.password === password);
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         localStorage.setItem("user", JSON.stringify(user)); // Guardar sesión
 
                         if (user.role === "admin") {
-                            window.location.href = "../dashboard.html"; // Redirigir admin
+                            window.location.href = "../vistas/dashboard.html"; // Redirigir admin
                         } else {
                             window.location.href = "../index.html"; // Redirigir usuario normal
                         }
@@ -41,11 +41,12 @@ document.addEventListener("DOMContentLoaded", function () {
             const newUsername = document.getElementById("newUsername").value;
             const newPassword = document.getElementById("newPassword").value;
 
-            fetch("http://localhost:3000/users", {
+            fetch("https://frontend-triplepixel-1.onrender.com/users", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ username: newUsername, password: newPassword, role: "user" })
             })
+
                 .then(response => response.json())
                 .then(() => {
                     alert("Registro exitoso. Serás redirigido a la página principal.");
